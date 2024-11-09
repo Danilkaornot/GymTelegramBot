@@ -1,5 +1,5 @@
-aiogram==2.25.1
+aiogram==3.14.0
 sqlalchemy==1.4.47
-asyncpg==0.26.0
+asyncpg==0.30.0
 python-dotenv==1.0.0
 
