@@ -2,7 +2,6 @@
 import logging
 import os
 from aiogram import Bot, Dispatcher, types
-from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from database import SessionLocal, engine
 from models import Base
 from handlers import user_handlers, training_handlers
@@ -22,8 +21,7 @@ Base.metadata.create_all(bind=engine)
 
 # Создание бота и диспетчера
 bot = Bot(token=API_TOKEN)
-storage = MemoryStorage()
-dp = Dispatcher(bot, storage=storage)
+dp = Dispatcher(bot)
 
 # Регистрация обработчиков
 # user_handlers.register_handlers(dp)
